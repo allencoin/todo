@@ -1,6 +1,8 @@
 class TasksController < ApplicationController
 	def index
-		render json: Task.all
+		# render json: Task.all
+		# order tasks by ID
+		render json: Task.order(:id)
 	end
 
 	def update
